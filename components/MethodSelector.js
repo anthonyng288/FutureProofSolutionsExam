@@ -29,6 +29,7 @@ export default {
     const loading = ref(false);
     const error = ref("");
 
+    //When component is mounted, fetch methods
     onMounted(async () => {
       loading.value = true;
       try {
@@ -46,6 +47,7 @@ export default {
       }
     });
 
+    //Select a method
     const selectMethod = (method) => {
       selectedMethod.value = method;
       emit("method-selected", method);
